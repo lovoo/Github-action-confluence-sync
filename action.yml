@@ -1,0 +1,25 @@
+# action.yml
+name: 'confluence-markdown-sync'
+description: 'Copy content of a markdown file to a confluence site'
+branding:
+  icon: 'upload-cloud'  
+  color: 'blue'
+inputs:
+  from: 
+    description: 'Path to the markdown file. Relative to root of repository'
+    required: true
+  to:
+    description: 'The page ID in confluence'
+    required: true
+  cloud:
+    description: 'Atlassian Cloud ID'
+    required: true
+  user:
+    description: 'Username of the token user'
+    required: true
+  token:
+    description: 'Token for the user'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

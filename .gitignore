@@ -1,0 +1,8 @@
+.mypy_cache
+.venv
+
+# Dev
+.vscode
+Test.md
+.github/workflows
+*.secrets
